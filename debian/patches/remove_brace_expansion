@@ -1,0 +1,16 @@
+Description: Remove brace expansion, it's a bashism
+Author: Ana Guerrero <ana-externe.guerrero@edf.fr>
+Last-Update: 2015-01-22
+
+--- a/Makefile
++++ b/Makefile
+@@ -26,7 +26,8 @@ install: all
+ 	# doc files
+ 	install -p -m 0644 doc/*.8 $(DESTDIR)/$(MANDIR)/man8/
+ 	# vim files
+-	install -d $(DESTDIR)/$(VIMDATADIR)/{ftdetect,syntax}
++	install -d $(DESTDIR)/$(VIMDATADIR)/ftdetect
++	install -d $(DESTDIR)/$(VIMDATADIR)/syntax
+ 	install -p -m 0644 doc/vim/ftdetect/milkcheck.vim $(DESTDIR)/$(VIMDATADIR)/ftdetect
+ 	install -p -m 0644 doc/vim/syntax/milkcheck.vim $(DESTDIR)/$(VIMDATADIR)/syntax
+

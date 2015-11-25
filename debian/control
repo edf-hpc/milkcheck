@@ -1,0 +1,18 @@
+Source: milkcheck
+Section: net
+Priority: optional
+Maintainer: Ana Guerrero <ana-externe.guerrero@edf.fr>
+Build-Depends: debhelper (>= 8), python-setuptools, python-all,
+ asciidoc, libxml2-utils, xmlto
+Standards-Version: 3.9.5
+X-Python-Version: >= 2.6
+Homepage: https://github.com/cea-hpc/milkcheck
+
+Package: milkcheck
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ python, clustershell, python-yaml
+Description: distributed cluster command management
+ Manage a cluster-wide system through configuration based commands.
+ It offers a easy to use interface to manage services, with dependencies
+ and various actions, all of them based on shell commands.

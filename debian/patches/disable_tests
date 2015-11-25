@@ -1,0 +1,15 @@
+Description: Disable tests.
+Author: Ana Guerrero <ana-externe.guerrero@edf.fr>
+Last-Update: 2015-01-21
+
+--- a/Makefile
++++ b/Makefile
+@@ -46,7 +46,7 @@ clean:
+ 	rm -rf $(RPMTOPDIR) build/
+
+ test:
+-	export PYTHONPATH=$$PWD/lib/ ; nosetests --exe --all-modules -w tests
++#	export PYTHONPATH=$$PWD/lib/ ; nosetests --exe --all-modules -w tests
+
+ $(MANPAGE): $(MANSOURCE)
+ 	a2x -f manpage $<
